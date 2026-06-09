@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BUS5001 ESG Sustainability Support Assistant</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <p class="kicker">BUS5001 Assessment 3 Prototype</p>
+      <h1>ESG Sustainability Support Assistant</h1>
+      <p class="subtitle">A local prototype that demonstrates chatbot intent routing, parameter capture, fallback handling, escalation, and ESG message triage.</p>
+    </div>
+    <div class="status-card" aria-label="Prototype status">
+      <span class="status-dot"></span>
+      <strong>Local Demo</strong>
+      <small>No external data is sent</small>
+    </div>
+  </header>
+
+  <main class="layout">
+    <section class="panel chat-panel" aria-labelledby="chat-title">
+      <div class="panel-head">
+        <div>
+          <p class="kicker">Q1 Prototype</p>
+          <h2 id="chat-title">Dialogflow CX-style ESG Chatbot</h2>
+        </div>
+        <button id="runDemo" class="ghost">Run sample flow</button>
+      </div>
+
+      <div id="chatLog" class="chat-log" role="log" aria-live="polite"></div>
+
+      <div class="quick-actions" aria-label="Example chatbot prompts">
+        <button data-message="There is a water leak in Building C that has been running all morning.">Water leak</button>
+        <button data-message="The recycling bins are contaminated again near Level 2 kitchen.">Waste contamination</button>
+        <button data-message="The accessible entrance near the main building has been blocked for two days.">Accessibility issue</button>
+        <button data-message="One of our suppliers may not meet our sustainability policy.">Supplier concern</button>
+      </div>
+
+      <form id="chatForm" class="chat-form">
+        <label for="chatInput" class="sr-only">Type a message to the ESG chatbot</label>
+        <input id="chatInput" type="text" placeholder="Type an ESG issue or question..." autocomplete="off" />
+        <button type="submit">Send</button>
+      </form>
+    </section>
+
+    <aside class="panel evidence-panel" aria-labelledby="evidence-title">
+      <p class="kicker">Live Evidence</p>
+      <h2 id="evidence-title">Captured Parameters</h2>
+      <pre id="parameterOutput" class="code-block">{
+  "intent": "waiting_for_user",
+  "parameters": {}
+}</pre>
+      <button id="downloadTranscript" class="full-width">Download transcript JSON</button>
+
+      <h3>Minimum requirement mapping</h3>
+      <ul class="checklist">
+        <li><strong>Use case:</strong> Sustainability incident reporting assistant</li>
+        <li><strong>Intents:</strong> report incident, policy question, status/help, escalation, fallback</li>
+        <li><strong>Entity/parameter:</strong> issue category, location, urgency, team</li>
+        <li><strong>Branching:</strong> critical/accessibility/supplier issues escalate</li>
+        <li><strong>Endpoint:</strong> local ticket confirmation and referral</li>
+      </ul>
+    </aside>
+
+    <section class="panel triage-panel" aria-labelledby="triage-title">
+      <div class="panel-head">
+        <div>
+          <p class="kicker">Q3 Prototype</p>
+          <h2 id="triage-title">ESG Message Triage JSON Generator</h2>
+        </div>
+        <button id="triageSample" class="ghost">Use sample</button>
+      </div>
+
+      <label for="triageInput">Paste an ESG-related operational message</label>
+      <textarea id="triageInput" rows="5" placeholder="Example: The air conditioning is running overnight in an empty office."></textarea>
+      <div class="button-row">
+        <button id="triageBtn">Generate JSON</button>
+        <button id="copyJson" class="ghost">Copy JSON</button>
+      </div>
+      <pre id="triageOutput" class="code-block output-large">{
+  "status": "waiting_for_message"
+}</pre>
+    </section>
+
+    <section class="panel design-panel" aria-labelledby="design-title">
+      <p class="kicker">Conversation Design</p>
+      <h2 id="design-title">Flow Summary</h2>
+      <div class="flow-grid">
+        <div><span>1</span><strong>Welcome</strong><small>Explains purpose and privacy boundary.</small></div>
+        <div><span>2</span><strong>Identify intent</strong><small>Classifies ESG incident, policy, status, or escalation.</small></div>
+        <div><span>3</span><strong>Capture parameters</strong><small>Extracts location, issue category, urgency and sensitivity.</small></div>
+        <div><span>4</span><strong>Branch route</strong><small>Chooses facilities, sustainability, procurement or inclusion pathway.</small></div>
+        <div><span>5</span><strong>Fallback</strong><small>Requests clarification if the message is unclear.</small></div>
+        <div><span>6</span><strong>Endpoint</strong><small>Creates local ticket confirmation or recommends human escalation.</small></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>This prototype is for academic demonstration only. It does not connect to Dialogflow CX, cloud ticketing systems, Microsoft Stream, GitHub, or live organisational data.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

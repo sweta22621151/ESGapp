@@ -1,0 +1,12 @@
+{
+  "use_case": "Sustainability incident reporting assistant",
+  "teams": {
+    "Facilities and Sustainability Operations": "Water leaks, maintenance-related sustainability issues and general facility incidents.",
+    "Facilities Energy Management": "Energy waste, unnecessary HVAC, lighting and overnight equipment usage.",
+    "Waste and Recycling Team": "Waste contamination, recycling guidance and disposal procedures.",
+    "Procurement and ESG Governance": "Supplier sustainability concerns and procurement compliance.",
+    "Accessibility and Inclusion Team": "Accessibility barriers and inclusive workplace follow-up.",
+    "People, Governance and Compliance Team": "Conduct, governance, privacy and sensitive employee concerns."
+  },
+  "privacy_notice": "The prototype stores transcript data locally in the browser only when exported by the user. It does not connect to external systems."
+}

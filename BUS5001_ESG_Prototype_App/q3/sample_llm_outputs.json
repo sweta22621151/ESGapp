@@ -1,0 +1,65 @@
+[
+  {
+    "message": "There is a water leak in Building C that has been running all morning.",
+    "llm_output": {
+      "issue_category": "water_leak",
+      "urgency": "HIGH",
+      "sentiment": "NEGATIVE",
+      "followup_required": "Y",
+      "recommended_team": "Facilities and Sustainability Operations",
+      "escalation_reason": "A leak running all morning may waste water and could create a facility hazard if not addressed.",
+      "data_sensitivity_risk": "LOW",
+      "brief_summary": "Employee reports an ongoing water leak in Building C.",
+      "missing_information": ["exact floor or room", "whether there is visible damage or safety risk"],
+      "human_review_required": "Y"
+    },
+    "baseline_output": {
+      "issue_category": "water_leak",
+      "urgency": "HIGH",
+      "recommended_team": "Facilities and Sustainability Operations",
+      "confidence": 0.82
+    }
+  },
+  {
+    "message": "I want to report that one of our suppliers may not meet our sustainability policy.",
+    "llm_output": {
+      "issue_category": "supplier_policy",
+      "urgency": "HIGH",
+      "sentiment": "NEGATIVE",
+      "followup_required": "Y",
+      "recommended_team": "Procurement and ESG Governance",
+      "escalation_reason": "Supplier policy concerns may create compliance and reputational risk and should be reviewed by procurement or ESG governance staff.",
+      "data_sensitivity_risk": "MEDIUM",
+      "brief_summary": "Employee reports a possible supplier sustainability policy concern.",
+      "missing_information": ["supplier name", "policy area", "available evidence"],
+      "human_review_required": "Y"
+    },
+    "baseline_output": {
+      "issue_category": "supplier_policy",
+      "urgency": "HIGH",
+      "recommended_team": "Procurement and ESG Governance",
+      "confidence": 0.82
+    }
+  },
+  {
+    "message": "The recycling bins are contaminated again and no one seems to be checking them.",
+    "llm_output": {
+      "issue_category": "waste_contamination",
+      "urgency": "MEDIUM",
+      "sentiment": "NEGATIVE",
+      "followup_required": "Y",
+      "recommended_team": "Waste and Recycling Team",
+      "escalation_reason": "Repeated contamination can affect waste diversion and requires operational follow-up, but no immediate safety risk is stated.",
+      "data_sensitivity_risk": "LOW",
+      "brief_summary": "Employee reports repeated recycling bin contamination and lack of monitoring.",
+      "missing_information": ["location", "type of contamination", "how often it occurs"],
+      "human_review_required": "N"
+    },
+    "baseline_output": {
+      "issue_category": "waste_contamination",
+      "urgency": "MEDIUM",
+      "recommended_team": "Waste and Recycling Team",
+      "confidence": 0.76
+    }
+  }
+]

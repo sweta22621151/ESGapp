@@ -1,0 +1,14 @@
+flowchart TD
+    A[Start: Welcome Page] --> B{Identify user intent}
+    B -->|report_esg_incident| C[Collect issue category and location]
+    B -->|ask_esg_policy| D[Provide general ESG policy guidance]
+    B -->|request_status_or_help| E[Explain reporting process]
+    B -->|default_fallback| F[Ask clarifying question]
+    C --> G{Urgency or sensitivity?}
+    G -->|High/Critical or supplier/accessibility/governance| H[Escalate to human reviewer]
+    G -->|Low/Medium routine issue| I[Create standard ESG ticket]
+    H --> J[Endpoint: confirmation and responsible team]
+    I --> J
+    D --> J
+    E --> J
+    F --> B

@@ -1,0 +1,6 @@
+parameter_name,type_or_entity,example_values,purpose
+issue_category,custom entity,"water_leak; energy_waste; waste_contamination; supplier_policy; accessibility_barrier",Identifies the ESG incident type for routing
+location,free text/system parameter,"Building C; Level 2 kitchen; main entrance; office floor",Captures where the issue occurred
+urgency,custom or derived parameter,"LOW; MEDIUM; HIGH; CRITICAL",Supports priority and escalation route
+recommended_team,derived route output,"Facilities; Waste Team; Procurement; Accessibility Team",Shows which team should review the issue
+sensitive_or_inclusion_flag,derived boolean,"Y; N",Triggers human oversight for supplier/accessibility/governance concerns

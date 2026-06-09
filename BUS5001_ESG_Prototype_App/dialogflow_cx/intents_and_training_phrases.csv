@@ -1,0 +1,6 @@
+intent,training_phrase_1,training_phrase_2,training_phrase_3,training_phrase_4,training_phrase_5
+report_esg_incident,There is a water leak in Building C,The recycling bins are contaminated again,The air conditioning is running overnight,The lights are on in an empty office,I need to report energy waste
+ask_esg_policy,What is the recycling policy,What are the sustainable procurement rules,Where can I find the ESG policy,How do I dispose of batteries,What is the energy saving procedure
+request_status_or_help,What happens after I report this,Who will review my issue,Can I get help with reporting,How do I report an incident,What information do you need
+escalate_sensitive_issue,The accessible entrance has been blocked,One supplier may not meet sustainability policy,This is unsafe and urgent,I have a governance concern,This may need human review
+default_fallback,I need help with something,Can you tell me more,This is not clear,Random unclear message,Something is wrong

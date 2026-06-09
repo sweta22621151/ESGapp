@@ -1,0 +1,22 @@
+BUS5001_ESG_Prototype_App/
+├── index.html
+├── styles.css
+├── app.js
+├── server.py
+├── start_app.bat
+├── start_app.sh
+├── README.md
+├── data/
+│   └── esg_kb.json
+├── dialogflow_cx/
+│   ├── dialogflow_build_guide.md
+│   ├── entities_parameters.csv
+│   ├── flow_map.mmd
+│   └── intents_and_training_phrases.csv
+├── evidence/
+│   ├── sample_chatbot_transcript.json
+│   └── screenshots_to_capture_checklist.md
+└── q3/
+    ├── baseline_triage.py
+    ├── revised_prompt_template.txt
+    └── sample_llm_outputs.json

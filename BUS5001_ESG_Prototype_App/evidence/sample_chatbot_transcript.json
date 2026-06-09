@@ -1,0 +1,26 @@
+{
+  "scenario": "Accessibility barrier escalation journey",
+  "messages": [
+    {
+      "sender": "bot",
+      "text": "Welcome. I am the ESG Sustainability Support Assistant. Please report one ESG issue with location."
+    },
+    {
+      "sender": "user",
+      "text": "The accessible entrance near the main building has been blocked for two days."
+    },
+    {
+      "sender": "bot",
+      "text": "Thank you. I identified this as accessibility barrier at near the main building. Urgency: HIGH. Recommended team: Accessibility and Inclusion Team. Because this is high priority or sensitive, I will escalate it to a human reviewer."
+    }
+  ],
+  "captured_parameters": {
+    "intent": "escalate_sensitive_issue",
+    "issue_category": "accessibility_barrier",
+    "location": "near the main building",
+    "urgency": "HIGH",
+    "sensitive_or_inclusion_flag": "Y",
+    "recommended_team": "Accessibility and Inclusion Team",
+    "route": "human_escalation_route"
+  }
+}
